@@ -91,7 +91,7 @@ def cosmic_dfba(model, time_range, dfba_data, fix_flx, fix_comp, notes):
 
     c_in = np.array([dfba_data['Perfusion']['concentrations'][dfba_data['Perfusion']['components'].index(cmp)] for cmp in cmp_names])
     
-    kinetic_comps = dfba_data['kinetic']['components']
+    kinetic_comps = dfba_data['kinetic']['components_names']
     kinetic_growth = np.array([dfba_data['kinetic']['Vm_growth'], dfba_data['kinetic']['Km']])
     kinetic_prod = np.array([dfba_data['kinetic']['Vm_prod'], dfba_data['kinetic']['Km']])
 
